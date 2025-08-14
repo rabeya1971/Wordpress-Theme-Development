@@ -8,7 +8,11 @@
                         <img src="<?php echo get_template_directory_uri(); ?> /assets/images/logo-footer.png" alt="">
                     </div>
 
-                    <p>Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.</p>
+                    <!-- <p>Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.</p> -->
+
+                    <?php if (get_theme_mod('footer_about_text')) : ?>
+                        <p><?php echo get_theme_mod('footer_about_text'); ?></p>
+                        <?php endif; ?>
 
                     <div class="social-links">
                         <!----- twitter ----->

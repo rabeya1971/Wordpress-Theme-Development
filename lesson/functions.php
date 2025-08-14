@@ -46,3 +46,21 @@ function lessonlms_theme_registration() {
   ));
 }
 add_action('after_setup_theme', 'lessonlms_theme_registration');
+
+function lessonlms_customize_register_footer($wp_customize) {
+  $wp_customize->add_section('footer_settings', array(
+    'title' => __('Footer Settings', 'lessonlms'),
+    'priority' =>120,
+  ));
+
+  //About Text
+  $wp_customize->add_setting('footer_about_text', array(
+    'default' => 'Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.',
+  ));
+  $wp_customize->add_control('footer_about_text', array(
+    'label' => __('About Text', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'textarea'
+  ));
+}
+add_action('customize_register','lessonlms_customize_register_footer');
