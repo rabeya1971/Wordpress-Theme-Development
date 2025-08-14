@@ -40,7 +40,9 @@ function lessonlms_theme_registration() {
 
   register_nav_menus(array(
   'primary_menu' => __('Primary Menu', 'lessonlms'),
-  'mobile_menu' => __('Mobile Menu', 'lessonlms')
+  'mobile_menu' => __('Mobile Menu', 'lessonlms'),
+  'footer_menu_1' => __('Footer Menu 1', 'lessonlms'),
+  'footer_menu_2' => __('Footer Menu 2', 'lessonlms')
   ));
 }
 add_action('after_setup_theme', 'lessonlms_theme_registration');

@@ -50,24 +50,36 @@
                     <div>Company</div>
                     <hr>
 
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#">About Us</a></li>
                         <li><a href="">Features</a></li>
                         <li><a href="">Our Pricing</a></li>
                         <li><a href="">Latest News</a></li>
-                    </ul>
+                    </ul> -->
+
+                    <?php 
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer_menu_1'
+                        ));
+                    ?>
                 </div>
 
                 <div class="footer-nav support">
                     <div>Support</div>
                     <hr>
 
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#">FAQ’s</a></li>
                         <li><a href="">Terms & Conditions</a></li>
                         <li><a href="">Privacy Policy</a></li>
                         <li><a href="">Contact Us</a></li>
-                    </ul>
+                    </ul> -->
+
+                    <?php 
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer_menu_2'
+                        ));
+                    ?>
                 </div>
 
                 <div class="footer-nav address">
@@ -98,7 +110,7 @@
             </div>
 
             <div class="copyright-area">
-                <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
+                <p>Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All rights reserved</p>
             </div>
         </div>
     </footer>
