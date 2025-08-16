@@ -31,7 +31,7 @@
 
                         <!----- linkdine ----->
                         <a href="#">
-                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="15" height="15" vie wBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.61856 1.81302C3.61856 2.81432 2.80852 3.62603 1.80928 3.62603C0.810041 3.62603 0 2.81432 0 1.81302C0 0.811715 0.810041 0 1.80928 0C2.80852 0 3.61856 0.811715 3.61856 1.81302Z" fill="white"/>
                                 <path d="M0.247423 4.95868H3.34021V15H0.247423V4.95868Z" fill="white"/>
                                 <path d="M8.31959 4.95868H5.2268V15H8.31959C8.31959 15 8.31959 11.8388 8.31959 9.86235C8.31959 8.67602 8.69766 7.4845 10.2062 7.4845C11.911 7.4845 11.9008 9.037 11.8928 10.2397C11.8824 11.8119 11.9072 13.4163 11.9072 15H15V9.70041C14.9738 6.31647 14.1508 4.75723 11.4433 4.75723C9.8354 4.75723 8.83871 5.53935 8.31959 6.24696V4.95868Z" fill="white"/>
@@ -50,9 +50,15 @@
                 </div>
 
                 <!----- company links ----->
-                <div class="footer-nav company">
+                <!-- <div class="footer-nav company">
                     <div>Company</div>
-                    <hr>
+                    <hr> -->
+
+                <div class="footer-nav company">
+                    <?php if (get_theme_mod('footer_menu_1_title') ) : ?>
+                        <div><?php echo esc_html (get_theme_mod('footer_menu_1_title')); ?></div>
+                        <?php endif; ?>
+                        <hr>
 
                     <!-- <ul>
                         <li><a href="#">About Us</a></li>
@@ -69,7 +75,9 @@
                 </div>
 
                 <div class="footer-nav support">
-                    <div>Support</div>
+                <?php if (get_theme_mod('footer_menu_2_title') ) : ?>
+                        <div><?php echo esc_html (get_theme_mod('footer_menu_2_title')); ?></div>
+                        <?php endif; ?>
                     <hr>
 
                     <!-- <ul>
@@ -87,27 +95,64 @@
                 </div>
 
                 <div class="footer-nav address">
-                    <div>Address</div>
-                    <hr>
+                    <!-- <div>Address</div> -->
+                <?php if (get_theme_mod('footer_address_title') ) : ?>
+                    <div><?php echo esc_html (get_theme_mod('footer_address_title')); ?></div>
+                    <?php endif; ?>
+                <hr>
 
                     <!----- location ----->
                     <div class="address-details location">
                         <a href="https://maps.app.goo.gl/5QJbeQc3kLpr9bX49">
-                            <span><strong>Location:</strong> 27 Division St, New York, NY 10002, USA</span>
+                            <!-- <span><strong>Location:</strong> 27 Division St, New York, NY 10002, USA</span> -->
+                            <span>
+                            <strong>   
+                            <?php if (get_theme_mod('footer_location') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_location')); ?>
+                            <?php endif; ?>
+                            </strong>
+                            <?php if (get_theme_mod('footer_location_description') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_location_description')); ?>
+                            <?php endif; ?>
+                            </span>
                         </a>
                     </div>
 
                     <!----- email ----->
                     <div class="address-details email">
-                        <a href="mailto:email@gmail.com">
-                            <span><strong>Email:</strong> email@gmail.com</span>
+                        <!-- <a href="mailto:email@gmail.com"> -->
+                        <a href="mailto:<?php echo esc_html (get_theme_mod('footer_email')); ?>">
+                            <!-- <span><strong>Email:</strong> email@gmail.com</span> -->
+
+                            <span>
+                            <strong>   
+                            <?php if (get_theme_mod('footer_email_title') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_email_title')); ?>
+                            <?php endif; ?>
+                            </strong>
+                            <?php if (get_theme_mod('footer_email') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_email')); ?>
+                            <?php endif; ?>
+                            </span>
                         </a>
                     </div>
 
                     <!----- contact number ----->
                     <div class="address-details phone">
-                        <a href="tel:+0001234567890">
-                            <span><strong>Phone:</strong> + 000 1234 567 890</span>
+                        <!-- <a href="tel:+0001234567890"> -->
+                        <a href="tel:<?php echo esc_html (get_theme_mod('footer_phone')); ?>">
+                            <!-- <span><strong>Phone:</strong> + 000 1234 567 890</span> -->
+
+                            <span>
+                            <strong>   
+                            <?php if (get_theme_mod('footer_phone_title') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_phone_title')); ?>
+                            <?php endif; ?>
+                            </strong>
+                            <?php if (get_theme_mod('footer_phone') ) : ?>
+                                <?php echo esc_html (get_theme_mod('footer_phone')); ?>
+                            <?php endif; ?>
+                            </span>
                         </a>
                     </div>
                 </div>

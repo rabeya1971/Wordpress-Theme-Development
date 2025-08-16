@@ -62,5 +62,97 @@ function lessonlms_customize_register_footer($wp_customize) {
     'section' => 'footer_settings',
     'type' => 'textarea'
   ));
+
+  //Footer menu 1 Title
+  $wp_customize->add_setting('footer_menu_1_title', array(
+    'default' => 'Company',
+  ));
+  $wp_customize->add_control('footer_menu_1_title', array(
+    'label' => __('Footer Menu 1 Title', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+  ));
+
+
+  //Footer menu 2 Title
+  $wp_customize->add_setting('footer_menu_2_title', array(
+    'default' => 'Support',
+   ));
+  $wp_customize->add_control('footer_menu_2_title', array(
+    'label' => __('Footer Menu 2 Title', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+  ));
+
+  //Footer Address Title
+  $wp_customize->add_setting('footer_address_title', array(
+    'default' => 'Address',
+ ));
+  $wp_customize->add_control('footer_address_title', array(
+    'label' => __('Footer Address Title', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+));
+
+  //Footer Location
+  $wp_customize->add_setting('footer_location', array(
+    'default' => '',
+ ));
+  $wp_customize->add_control('footer_location', array(
+    'label' => __('Footer Location', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+));
+
+  //Footer Location Description
+  $wp_customize->add_setting('footer_location_description', array(
+    'default' => '27 Division St, New York, NY 10002, USA',
+ ));
+  $wp_customize->add_control('footer_location_description', array(
+    'label' => __('Footer Location Description', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+));
+
+  //Footer Email Title
+  $wp_customize->add_setting('footer_email_title', array(
+    'default' => 'Email',
+ ));
+  $wp_customize->add_control('footer_email_title', array(
+    'label' => __('Footer Email Title', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+));
+
+  //Footer Email
+  $wp_customize->add_setting('footer_email', array(
+    'default' => 'mailto:email@gmail.com',
+));
+  $wp_customize->add_control('footer_email', array(
+    'label' => __('Footer Email', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'email'
+));
+
+  //Footer Phone Title
+  $wp_customize->add_setting('footer_phone_title', array(
+    'default' => 'Phone',
+ ));
+  $wp_customize->add_control('footer_phone_title', array(
+    'label' => __('Footer Phone Title', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'text'
+));
+
+  //Footer Phone
+  $wp_customize->add_setting('footer_phone', array(
+    'default' => '+0001234567890',
+));
+  $wp_customize->add_control('footer_phone', array(
+    'label' => __('Footer Email', 'lessonlms'),
+    'section' => 'footer_settings',
+    'type' => 'tel'
+));
+
 }
 add_action('customize_register','lessonlms_customize_register_footer');
