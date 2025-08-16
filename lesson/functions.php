@@ -53,6 +53,27 @@ function lessonlms_customize_register_footer($wp_customize) {
     'priority' =>120,
   ));
 
+  // Footer logo
+  $wp_customize->add_setting('footer_logo');
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_logo',array(
+    'label' => __('footer Logo', 'lessonlms'),
+    'settings' => 'footer_logo',
+    'section' => 'footer_settings'
+  )));
+
+  //Social Links:
+  $socials = ['twitter', 'facebook', 'linkedin', 'instagram'];
+  foreach ( $socials as $social ) {
+    $wp_customize->add_setting("footer_{$social}_link",array(
+      'default' => '#',
+    ));
+    $wp_customize->add_control("footer_{$social}_link",array(
+      'label' => sprintf(__('%s URL', 'lessonlms'), ucfirst($social)),
+      'section' => 'footer_settings',
+      'type' => 'url'
+    ));
+  }
+
   //About Text
   $wp_customize->add_setting('footer_about_text', array(
     'default' => 'Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.',
@@ -126,7 +147,7 @@ function lessonlms_customize_register_footer($wp_customize) {
 
   //Footer Email
   $wp_customize->add_setting('footer_email', array(
-    'default' => 'mailto:email@gmail.com',
+    'default' => 'email@gmail.com',
 ));
   $wp_customize->add_control('footer_email', array(
     'label' => __('Footer Email', 'lessonlms'),
