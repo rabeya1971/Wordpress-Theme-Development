@@ -17,6 +17,9 @@ function lessonlms_theme_scripts(){
     //Box icon
     wp_enqueue_style('boxicon-css', 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', array(), '2.1.4'); 
 
+      //Font Awesome icon
+    wp_enqueue_style('font-awesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css', array(), '7.0.0');
+
     //style css
      wp_enqueue_style('lesson-theme-style', get_stylesheet_uri()); 
 
@@ -33,6 +36,8 @@ function lessonlms_theme_scripts(){
 add_action("wp_enqueue_scripts","lessonlms_theme_scripts");
 
 function lessonlms_theme_registration() {
+
+  add_theme_support('post-thumbnails');
   add_theme_support( 'custom-logo',array(
     'height' => 30,
     'width' => 80,
@@ -48,6 +53,34 @@ function lessonlms_theme_registration() {
 add_action('after_setup_theme', 'lessonlms_theme_registration');
 
 function lessonlms_customize_register_footer($wp_customize) {
+
+  //Blog Section Start Here
+  $wp_customize->add_section('blog_settings', array(
+    'title' => __('Blog Settings', 'lessonlms'),
+    'priority' =>110,
+  ));
+
+  //Blog Section Title
+  $wp_customize->add_setting('blog_section_title', array(
+    'default' => 'Our blog',
+  ));
+  $wp_customize->add_control('blog_section_title', array(
+    'label' => __('Blog Section Title', 'lessonlms'),
+    'section' => 'blog_settings',
+    'type' => 'text'
+  ));
+
+    //Blog Section Description
+    $wp_customize->add_setting('blog_section_description', array(
+      'default' => 'Read our regular travel blog and know the latest update of tour and travel',
+    ));
+    $wp_customize->add_control('blog_section_description', array(
+      'label' => __('Blog Section Description', 'lessonlms'),
+      'section' => 'blog_settings',
+      'type' => 'text'
+    ));
+
+  //Footer section Start here
   $wp_customize->add_section('footer_settings', array(
     'title' => __('Footer Settings', 'lessonlms'),
     'priority' =>120,

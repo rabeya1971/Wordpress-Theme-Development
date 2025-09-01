@@ -130,6 +130,8 @@
     .sngle-blog .img{
         height: 200px;
     }
+
+    
     
     /*----- footer section -----*/
     footer{
@@ -328,6 +330,23 @@
         font-size: 14px;
     }
 
+    /* Blog Details */
+    .blog-details-wrapper {
+        flex-direction: column;
+    }
+    
+    .blog-content {
+        padding: 30px;
+    }
+    
+    .blog-title {
+        font-size: 28px;
+    }
+    
+    .comment.reply {
+        margin-left: 40px;
+    }
+
 
     /*----- footer -----*/
     .footer-wrapper{
@@ -458,6 +477,37 @@
     /*----- blog section -----*/
     .single-blog-details {
         padding: 25px;
+    }
+
+    /* Blog Details */
+    .blog-details {
+        padding: 60px 0;
+    }
+    
+    .blog-title {
+        font-size: 24px;
+    }
+    
+    .author-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .comment {
+        flex-direction: column;
+    }
+    
+    .comment.reply {
+        margin-left: 20px;
+    }
+    
+    .comment-form .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sidebar-widget {
+        padding: 20px;
     }
 
 
