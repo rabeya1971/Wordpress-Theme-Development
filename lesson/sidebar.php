@@ -9,6 +9,14 @@
                 
                 <div class="sidebar-widget recent-posts">
                     <h3 class="widget-title">Recent Posts</h3>
+                    <!-- <ul>
+                        <li>
+                          <a href="#">How to become a pro web designer in 2025</a>
+                          <span class="post-date">Nov 21, 2021</span>  
+                        </li>
+                    </ul> 
+                </div> -->
+                   
                     <ul>
                         <?php 
                             $recent_posts = wp_get_recent_posts(array(
@@ -27,7 +35,18 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
-                
+
+                <!-- <div class="sidebar-widget categories">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul>
+                        <li><a href="#"> Web Design <span>(12)</span></a></li>
+                        <li><a href="#"> Development <span>(8)</span></a></li>
+                        <li><a href="#"> UI/UX <span>(15)</span></a></li>
+                        <li><a href="#"> Freelancing <span>(5)</span></a></li>
+                        <li><a href="#"> Carrer <span>(7)</span></a></li>
+                    </ul>
+                </div>
+                 -->
                 <div class="sidebar-widget categories">
                     <h3 class="widget-title"><?php _e('Categories','lessonlms'); ?></h3>
                     <ul>
@@ -40,6 +59,21 @@
                         
                     </ul>
                 </div>
+
+                <!-- <div class="sidebar-widget tags">
+                    <h3 class="widget-title">Tags</h3>
+                    <div class="tag-cloud">
+                        <a href="#">Design</a>
+                        <a href="#">HTML</a>
+                        <a href="#">CSS</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Carrer</a>
+                        <a href="#">Freelance</a>
+                        <a href="#">2025</a>
+                        <a href="#">Tips</a>
+                    </div>
+                </div> -->
+
                 
                 <div class="sidebar-widget tags">
                     <h3 class="widget-title"><?php _e('Tags', 'lessonlms'); ?></h3>

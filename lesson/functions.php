@@ -210,3 +210,18 @@ function lessonlms_customize_register_footer($wp_customize) {
 
 }
 add_action('customize_register','lessonlms_customize_register_footer');
+
+function lessonlms_register_sidebar() {
+  register_sidebar(array(
+    'name' => __('Blog Sidebar','lessonlms'),
+    'id' => 'blog_sidebar',
+    'description' => __('Widgets in this area will be shown on the blog sidebar.','lessonlms'),
+    'before_widgets' => '<div class="sidebar-widget search-widget">' ,
+    'after_widgets' => '</div>',
+    'before_widgets' => ' <div class="sidebar-widget recent-posts">',
+    'after_widgets' => '</div>',
+    'before_title' => '<h3 class="widget-title">Search',
+    'after_title' => '</h3>'
+  ));
+}
+add_action('widgets_init', 'lessonlms_register_sidebar');
