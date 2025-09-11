@@ -15,8 +15,10 @@
                                 </svg>
 
                                 <div class="text">
-                                    <span>20 Courses</span>
-                                    <p>UI/UX Design</p>
+                                    <!-- <span>20 Courses</span> -->
+                                    <span><?php echo esc_html(get_theme_mod('uiux_courses_count','20')); ?> Courses</span>
+                                    <!-- <p>UI/UX Design</p> -->
+                                     <p><?php echo esc_html(get_theme_mod('uiux_title','UI/UX Design')); ?></p>
                                 </div>
                             </div>
 
@@ -28,8 +30,10 @@
                                 </svg>
 
                                 <div class="text">
-                                    <span>20 Courses</span>
-                                    <p>Development</p>
+                                    <!-- <span>20 Courses</span> -->
+                                     <span><?php echo esc_html(get_theme_mod('dev_courses_count','20')); ?>Courses</span>
+                                    <!-- <p>Development</p> -->
+                                     <p><?php echo esc_html(get_theme_mod('development_title','Development')); ?></p>
                                 </div>
                             </div>
 
@@ -40,8 +44,9 @@
                                 </svg>
 
                                 <div class="text">
-                                    <span>30 Courses</span>
-                                    <p>Marketing</p>
+                                    <span> <?php echo esc_html(get_theme_mod('marketing_courses_count','30')); ?> Courses</span>
+                                    <!-- <p>Marketing</p> -->
+                                    <p><?php echo esc_html(get_theme_mod('marketing_title','Marketing')); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +85,11 @@
                             <!-- <span>Recent engagement</span> -->
                             <span><?php echo esc_html(get_theme_mod('engagement_title','Recent engagement')); ?></span>
                             <div class="engagement-wrapper">
-                                <h3>50K <span>Students</span></h3>
-                                <h3>70+ <span>Courses</span></h3>
+                                <!-- <h3>50K <span>Students</span></h3> -->
+                                <h3><?php echo esc_html(get_theme_mod('students_count','50K ')); ?><span><?php echo esc_html(get_theme_mod('students_label','Students')); ?></span></h3>
+                                <!-- <h3>70+ <span>Courses</span></h3> -->
+                                <h3><?php echo esc_html(get_theme_mod('courses_count','70+ ')); ?><span><?php echo esc_html(get_theme_mod('courses_label','Courses')); ?></span></h3>
+                                
                             </div>
                         </div>
                     </div>

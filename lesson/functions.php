@@ -141,6 +141,110 @@ function lessonlms_customize_register($wp_customize) {
         'type' => 'text'
       ));
 
+      //Students Count
+      $wp_customize->add_setting('students_count', array(
+        'default' => '50k',
+      ));
+      $wp_customize->add_control('students_count', array(
+        'label' => __('Students Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+
+      //Students Label
+      $wp_customize->add_setting('students_label', array(
+        'default' => 'Students',
+      ));
+      $wp_customize->add_control('students_label', array(
+        'label' => __('Students Label', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+
+      //Courses Count
+      $wp_customize->add_setting('courses_count', array(
+        'default' => '70+',
+      ));
+      $wp_customize->add_control('courses_count', array(
+        'label' => __('Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+
+      //Courses Label
+      $wp_customize->add_setting('courses_label', array(
+        'default' => 'Courses',
+      ));
+      $wp_customize->add_control('courses_label', array(
+        'label' => __('Courses Label', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+      
+
+      //UI/UX Courses Count
+      $wp_customize->add_setting('uiux_courses_count', array(
+        'default' => '20',
+      ));
+      $wp_customize->add_control('uiux_courses_count', array(
+        'label' => __('UI/UX Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+      ));
+
+
+      //Development Courses Count
+      $wp_customize->add_setting('dev_courses_count', array(
+        'default' => '20',
+      ));
+      $wp_customize->add_control('dev_courses_count', array(
+        'label' => __('Development Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+      ));
+
+
+
+      //Marketing Courses Count
+      $wp_customize->add_setting('marketing_courses_count', array(
+        'default' => '30',
+      ));
+      $wp_customize->add_control('marketing_courses_count', array(
+        'label' => __('Marketing Courses Count', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'number'
+      ));
+
+      //UI/UX Design Title
+      $wp_customize->add_setting('uiux_title', array(
+        'default' => 'UI/UX Design',
+      ));
+      $wp_customize->add_control('uiux_title', array(
+        'label' => __('UI/UX Design Title', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+      
+      //Development Title
+      $wp_customize->add_setting('development_title', array(
+        'default' => 'Development',
+      ));
+      $wp_customize->add_control('development_title', array(
+        'label' => __('Development Title', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+
+      //Marketing Title
+      $wp_customize->add_setting('marketing_title', array(
+        'default' => 'Marketing',
+      ));
+      $wp_customize->add_control('marketing_title', array(
+        'label' => __('Marketing Title', 'lessonlms'),
+        'section' => 'hero_settings',
+        'type' => 'text'
+      ));
+
 
   //Blog Section Start Here
   $wp_customize->add_section('blog_settings', array(
