@@ -1,3 +1,4 @@
+
 <section class="courses">
             <div class="container">
                 <div class="heading courses-heading">
@@ -19,7 +20,7 @@
                         $price = get_post_meta(get_the_ID(), 'price', true);
 
                         $price = !empty($price) ? $price : '0.00';
-                        $rating = !empty($rating) ?$rating : '0.0';
+                        $rating = !empty($rating)?$rating : '0.0';
 
                 ?>
                     <!----- course-1 ----->
@@ -153,15 +154,15 @@
                         </div>
                     </div> -->
 
-                    <!-- --- course-1 ---
-                    <div class="course course-1 active-btn">
+                     <!-- course-1  -->
+                    <!-- <div class="course course-1 active-btn">
                         <div class="img">
                             <img src="<?php echo get_template_directory_uri(); ?> /assets/images/course-1.png" alt="course-1">
                         </div>
 
-                        <div class="course-details">
+                        <div class="course-details"> -->
                             <!----- course title and rating ----->
-                            <div class="flex">
+                            <!-- <div class="flex">
                                 <span class="c-title">Basic web design</span>
 
                                 <div class="rating">
@@ -173,17 +174,17 @@
                                 </div>
                             </div>
 
-                            <p>Get the best course, gain knowledge and shine for your future career.</p>
+                            <p>Get the best course, gain knowledge and shine for your future career.</p> -->
 
 
                             <!----- price and btn ----->
-                            <div class="price-btn">
+                            <!-- <div class="price-btn">
                                 <span class="price">$120.75</span>
 
                                 <div class="yellow-bg-btn book-now">Book Now</div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!----- course-2 ----->
                     <!-- <div class="course course-2">
